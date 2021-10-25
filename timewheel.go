@@ -5,11 +5,15 @@ import (
 )
 
 var (
-	DefaultTimeWheel, _ = NewTimeWheel(time.Second, 120)
+	DefaultTimeWheel, _ = NewTimeWheel(time.Second, 1800)
 )
 
-func init() {
+func Start() {
 	DefaultTimeWheel.Start()
+}
+
+func Stop() {
+	DefaultTimeWheel.Stop()
 }
 
 func ResetDefaultTimeWheel(tw *TimeWheel) {
