@@ -184,15 +184,15 @@ func TestTickerBetween(t *testing.T) {
 }
 
 func TestTickerSecond(t *testing.T) {
-	tw, err := NewTimeWheel(1*time.Millisecond, 10000)
+	tw, err := NewTimeWheel(10*time.Millisecond, 10000)
 	assert.Nil(t, err)
 
 	tw.Start()
 	defer tw.Stop()
 
 	var (
-		timeout = time.After(110 * time.Millisecond)
-		ticker  = tw.NewTicker(1 * time.Millisecond)
+		timeout = time.After(1100 * time.Millisecond)
+		ticker  = tw.NewTicker(10 * time.Millisecond)
 		incr    int
 	)
 
