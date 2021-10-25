@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/rfyiamcool/go-timewheel"
+	"github.com/fufuok/timewheel"
 )
 
 var (
@@ -62,6 +62,7 @@ func batchRun6s() {
 	taskNum := 50000
 	go processCallbackLoop(loop, taskNum, delay, beforeDiff, afterDiff)
 }
+
 func batchRun8s() {
 	worker := 5000
 	delay := 8

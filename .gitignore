@@ -1,1 +1,6 @@
 .vscode/
+.idea/
+/.gitignore
+*.zip
+vendor/
+tmp/

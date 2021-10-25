@@ -476,6 +476,7 @@ func TestRunStopFunc(t *testing.T) {
 	t1.AddStopFunc(func() {
 		called = true
 	})
+	Start()
 
 	select {
 	case <-t1.C:
